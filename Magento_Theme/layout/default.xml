@@ -1,0 +1,11 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- Add your existing code for the header banner block here -->
+        <referenceContainer name="header.container">
+            <container name="header.banner.container" as="header_banner_container" htmlTag="div" htmlClass="header-banner-container" before="-" />
+        </referenceContainer>
+        <referenceContainer name="header.banner.container">
+            <block class="Magento\Framework\View\Element\Template" name="free_shipping_block" template="Magento_Theme::free_shipping_block.phtml" ifconfig="carriers/freeshipping/active"/>
+        </referenceContainer>
+    </body>
+</page>

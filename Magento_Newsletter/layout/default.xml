@@ -1,0 +1,13 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- Move the "Newsletter Subscription" block to the footer -->
+        <move element="form.subscribe" destination="footer-container" before="-" />
+
+        <!-- Update the template for the "Newsletter Subscription" block -->
+        <referenceBlock name="form.subscribe">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">Magento_Newsletter::subscribe.phtml</argument>
+            </action>
+        </referenceBlock>
+    </body>
+</page>
